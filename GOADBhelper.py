@@ -2,8 +2,12 @@ f = CurrentFont()
 
 for gName in f.selectedGlyphNames:
     glyph = f[gName]
-    print(f"{gName} {gName}")     
-
+    # print(f"{gName} {gName}")
+    if glyph.unicode:
+        unicodeStr = f"uni{glyph.unicode:04X}"
+        print(f"{gName} {gName} {unicodeStr}")
+    else:
+        print(f"{gName} {gName}")
 
 
 # def printSelectedGlyphsUnicode():
