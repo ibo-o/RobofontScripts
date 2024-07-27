@@ -1,3 +1,4 @@
+# menuTitle: Swap Two Selected
 # Swap Two Selected Glyphs
 
 # Get the current font

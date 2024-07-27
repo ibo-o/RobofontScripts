@@ -1,3 +1,4 @@
+# menuTitle: * Threshold Pen Selected
 from fontPens.thresholdPen import thresholdGlyph
 font = CurrentFont()
 

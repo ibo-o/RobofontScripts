@@ -1,3 +1,5 @@
+# menuTitle: * Flatten Pen Selected
+
 from fontPens.flattenPen import flattenGlyph
 font = CurrentFont()
 

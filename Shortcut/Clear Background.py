@@ -1,4 +1,4 @@
-# menuTitle: ClearBackground
+# menuTitle: Clear Background
 # shortCut: command + option + b
 
 glyph = CurrentGlyph()

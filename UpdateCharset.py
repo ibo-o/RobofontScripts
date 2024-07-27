@@ -1,5 +1,4 @@
-# menuTitle: UpdateCharset
-# shortCut: control + a
+# menuTitle: Update Charset
 
 #  24.03.2024 01:50 Connor Davenport wrote it in Discord channel
 

@@ -1,3 +1,5 @@
+# menuTitle: * Add Anchors for Selected
+
 from mojo.UI import UpdateCurrentGlyphView
 
 font = CurrentFont()
@@ -13,18 +15,18 @@ for glyph in font.selectedGlyphs:
         LSB = glyph.leftMargin
         anchors_to_add[glyph.name] = {
             #lc
-            'top': (LSB + w / 2, font.info.xHeight),
-            'bottom': (LSB + w / 2, 0),
+            'top': (LSB + w / 2, maxy + 20),
+            #'bottom': (LSB + w / 2, miny - 20 ),
             #'center': (LSB + w / 2, maxy - (h / 2)),
             
             #UC
-            'top': (LSB + w / 2, font.info.capHeight),
-            'bottom': (LSB + w / 2, 0),
+            #'top': (LSB + w / 2, font.info.capHeight),
+            #'bottom': (LSB + w / 2, 0),
             #'center': (LSB + w / 2, maxy - (h / 2)),
             #cmb            
-            '_top': (LSB + w / 2, miny),
-            '_bottom': (LSB + w / 2, maxy),
-            '_center': (LSB + w / 2, maxy - (h / 2))
+            #'_top': (LSB + w / 2, miny),
+            #'_bottom': (LSB + w / 2, maxy),
+            #'_center': (LSB + w / 2, maxy - (h / 2))
         }
 
 for glyph_name, glyph_anchors in anchors_to_add.items():
@@ -36,6 +38,7 @@ for glyph_name, glyph_anchors in anchors_to_add.items():
 
 UpdateCurrentGlyphView()
 
+print(glyph.bounds)
 #font.info.xHeight
 #font.info.capHeight
 #font.info.ascender

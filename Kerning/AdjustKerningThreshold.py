@@ -1,3 +1,4 @@
+# menuTitle: * Threshold Kerning Adjuster
 '''
 # 2024.05.07 Ryan Bugden wrote it for me in Discord channel.
 https://discord.com/channels/1052516637489766411/1237426181037363271/1237427072637337700

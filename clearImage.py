@@ -1,4 +1,4 @@
-# menuTitle: Clean All Images
+# menuTitle: Clean All Images in a Font
 # Clean all images inside the current opened UFO in RoboFont
 
 # Import the necessary modules

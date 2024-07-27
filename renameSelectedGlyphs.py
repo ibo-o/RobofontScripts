@@ -1,3 +1,4 @@
+# menuTitle: * Rename Selected
 def renameSelectedGlyphs(oldSuffix, newSuffix):
     font = CurrentFont()
     if font is None:

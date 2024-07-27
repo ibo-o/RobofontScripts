@@ -1,4 +1,4 @@
-#Frederik Berlaen Wrote this in class EsadType 03.10.2023
+# menuTitle: * Adjust Sidebearrings
 font = CurrentFont()
 
 for glyph in font.selectedGlyphs:

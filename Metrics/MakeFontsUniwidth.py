@@ -1,3 +1,4 @@
+# menuTitle: * Make Uniwidth & Dupe
 # paths to UFOS
 source_ufo_name = '/Users/username/Desktop/SourceUFO'
 target_ufo_name = '/Users/username/Desktop/TargetUFO'

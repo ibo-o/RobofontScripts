@@ -1,3 +1,4 @@
+# menuTitle: * Make Monospaced
 #Frederik Berlaen wrote it for me 24.01.20 on Discord DM
 
 monoWidth = 910

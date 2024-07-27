@@ -1,3 +1,4 @@
+# menuTitle: * GOADB Helper
 f = CurrentFont()
 
 for gName in f.selectedGlyphNames:
