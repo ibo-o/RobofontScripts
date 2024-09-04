@@ -4,6 +4,11 @@ from mojo.UI import UpdateCurrentGlyphView
 
 font = CurrentFont()
 
+xHeight = font.info.xHeight
+capHeight = font.info.capHeight
+ascender = font.info.ascender
+descender = font.info.descender
+
 anchors_to_add = {}
 
 for glyph in font.selectedGlyphs:
@@ -15,18 +20,27 @@ for glyph in font.selectedGlyphs:
         LSB = glyph.leftMargin
         anchors_to_add[glyph.name] = {
             #lc
-            'top': (LSB + w / 2, maxy + 20),
-            #'bottom': (LSB + w / 2, miny - 20 ),
+            #'aboveLC': (LSB + w / 2, xHeight + 33),
+            #'baseLC': (LSB + w / 2, 0 ),
+            #'belowLC': (LSB + w / 2, miny),
             #'center': (LSB + w / 2, maxy - (h / 2)),
+            'ogonek': (maxx, 0 ),
+            
             
             #UC
-            #'top': (LSB + w / 2, font.info.capHeight),
-            #'bottom': (LSB + w / 2, 0),
+            #'aboveUC': (LSB + w / 2, font.info.capHeight),
+            #'belowLC': (LSB + w / 2, -17),
+            #'baseLC': (LSB + w / 2, 0),
             #'center': (LSB + w / 2, maxy - (h / 2)),
+            
             #cmb            
-            #'_top': (LSB + w / 2, miny),
-            #'_bottom': (LSB + w / 2, maxy),
+            #'_aboveLC': (LSB + w / 2, miny),
+            #'_aboveUC': (LSB + w / 2, miny),
+            #'_belowLC': (LSB + w / 2, maxy),
+            #'_baseLC': (LSB + w / 2, maxy),
             #'_center': (LSB + w / 2, maxy - (h / 2))
+            #'_ogonek': (LSB + w / 2, maxy)
+            
         }
 
 for glyph_name, glyph_anchors in anchors_to_add.items():
