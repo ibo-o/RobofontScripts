@@ -6,9 +6,9 @@ for gName in f.selectedGlyphNames:
     # print(f"{gName} {gName}")
     if glyph.unicode:
         unicodeStr = f"uni{glyph.unicode:04X}"
-        print(f"{gName} {gName} {unicodeStr}")
+        print(f"{gName}	{gName}    {unicodeStr}")
     else:
-        print(f"{gName} {gName}")
+        print(f"{gName}	{gName}")
 
 
 # def printSelectedGlyphsUnicode():
