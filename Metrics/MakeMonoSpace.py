@@ -1,15 +1,15 @@
-# menuTitle: * Make Monospaced
+# menuTitle: * Change Widths
 #Frederik Berlaen wrote it for me 24.01.20 on Discord DM
 
-monoWidth = 910
+monoWidth = 3000
 
 font = CurrentFont()
 #this one only moves contours. Decomposing composites before running the script is recommended.
-for glyph in font:    
+for g in font.selectedGlyphs:    
     # calculate the diff in width and move only the contours
-    move = (monoWidth - glyph.width) / 2    
-    glyph.width = monoWidth
-    for contour in glyph:
+    move = (monoWidth - g.width) / 2    
+    g.width = monoWidth
+    for contour in g:
        contour.moveBy((move, 0))
        
        
