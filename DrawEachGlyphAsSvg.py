@@ -1,19 +1,20 @@
 '''
 A DrawBot script that draws all selected glyphs (or all glyphs if none are selected),
 placing one glyph per page and saving them as SVG files.
-It only works inside the RoboFont's DrawBot extension.
+It works in the RoboFont's scripting window.
 
 Heavily based on this example: https://robofont.com/documentation/how-tos/drawbot/proof-glyphs/
 
 '''
 
 import os
+import drawBot as db
 
 f = CurrentFont()
 
 #Settings
 glyphScale = 1  # Resize factor for glyphs
-canvasSize = f.info.unitsPerEm  # The base size of each page
+CanvasHeight = 3000  # The base size of each page
 
 # Get selected glyphs, or fall back to all glyphs in the font
 glyphNames = f.selectedGlyphNames if len(f.selectedGlyphs) else f.keys()
@@ -31,27 +32,27 @@ for glyphName in f.glyphOrder:
         continue
 
     g = f[glyphName]  # Get glyph
-    boxWidth = g.width * glyphScale
+    boxWidth = 3000
 
     # Create a new page for each glyph
-    newPage(canvasSize, canvasSize)
+    db.newPage(boxWidth, CanvasHeight)
 
     #Centering calculations
     desc = abs(f.info.descender or 0)
     asc = f.info.ascender or canvasSize
     fontHeight = asc + desc
 
-    y = (canvasSize - fontHeight) / 2 + desc
-    x = (canvasSize - g.width * glyphScale) / 2
+    y = (CanvasHeight - fontHeight) / 2 + desc
+    x = (boxWidth - g.width * glyphScale) / 2
 
     #Draw the glyph
-    save()
-    translate(x, y)
-    scale(glyphScale)
-    drawGlyph(g)
-    restore()
+    db.save()
+    db.translate(x, y)
+    db.scale(glyphScale)
+    db.drawGlyph(g)
+    db.restore()
 
-    #Export as SVG
-    svgFileName = fontName + "-" + glyphName + ".svg"
+    #Export as SVG fontName + "-" +
+    svgFileName =  glyphName + ".svg"
     svgPath = os.path.join(exportFolder, svgFileName)
-    saveImage(svgPath)
+    db.saveImage(svgPath)
