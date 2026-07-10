@@ -11,6 +11,7 @@ Thanks to Connor Davenport for the help: https://discord.com/channels/1052516637
 """
 
 import ezui
+from mojo.roboFont import OpenWindow
 from mojo.UI import CurrentGlyphWindow
 
 class FontSelectorController(ezui.WindowController):
@@ -54,4 +55,5 @@ class FontSelectorController(ezui.WindowController):
             except:
                 pass
 
-FontSelectorController()
+#FontSelectorController()
+OpenWindow(FontSelectorController)
